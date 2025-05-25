@@ -1,0 +1,180 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Collections - Интерактивное Обучение</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Java Collections Framework</h1>
+        <p>Изучение коллекций Java на практических примерах</p>
+    </header>
+
+    <nav class="tabs">
+        <button class="tab-button active" data-tab="overview">Обзор</button>
+        <button class="tab-button" data-tab="list">List</button>
+        <button class="tab-button" data-tab="set">Set</button>
+        <button class="tab-button" data-tab="map">Map</button>
+        <button class="tab-button" data-tab="queue">Queue</button>
+        <button class="tab-button" data-tab="streams">Streams</button>
+        <button class="tab-button" data-tab="utils">Утилиты</button>
+    </nav>
+
+    <main>
+        <div id="overview" class="tab-content active">
+            <h2>Обзор Java Collections Framework</h2>
+            <div class="collections-diagram">
+                <div class="collection-type">
+                    <h3>List (Списки)</h3>
+                    <ul>
+                        <li>ArrayList - быстрый доступ по индексу</li>
+                        <li>LinkedList - быстрая вставка/удаление</li>
+                        <li>Deque - двусторонняя очередь</li>
+                    </ul>
+                </div>
+                <div class="collection-type">
+                    <h3>Set (Множества)</h3>
+                    <ul>
+                        <li>HashSet - быстрый поиск</li>
+                        <li>LinkedHashSet - порядок вставки</li>
+                        <li>TreeSet - сортированное множество</li>
+                    </ul>
+                </div>
+                <div class="collection-type">
+                    <h3>Map (Карты)</h3>
+                    <ul>
+                        <li>HashMap - быстрый доступ по ключу</li>
+                        <li>LinkedHashMap - порядок вставки</li>
+                        <li>TreeMap - сортированная карта</li>
+                    </ul>
+                </div>
+                <div class="collection-type">
+                    <h3>Queue (Очереди)</h3>
+                    <ul>
+                        <li>PriorityQueue - очередь с приоритетом</li>
+                        <li>ConcurrentLinkedQueue - многопоточная</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="list" class="tab-content">
+            <h2>Списки (List)</h2>
+            <div class="example-container">
+                <div class="example-card" data-example="deque">
+                    <h3>Deque (ArrayDeque)</h3>
+                    <p>Двусторонняя очередь - добавление и удаление с обеих сторон</p>
+                    <button class="run-example">Запустить пример</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="set" class="tab-content">
+            <h2>Множества (Set)</h2>
+            <div class="example-container">
+                <div class="example-card" data-example="hashset">
+                    <h3>HashSet</h3>
+                    <p>Быстрое множество без дубликатов</p>
+                    <button class="run-example">Запустить пример</button>
+                </div>
+                <div class="example-card" data-example="linkedhashset">
+                    <h3>LinkedHashSet</h3>
+                    <p>HashSet с сохранением порядка вставки</p>
+                    <button class="run-example">Запустить пример</button>
+                </div>
+                <div class="example-card" data-example="treeset">
+                    <h3>TreeSet</h3>
+                    <p>Автоматически сортированное множество</p>
+                    <button class="run-example">Запустить пример</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="map" class="tab-content">
+            <h2>Карты (Map)</h2>
+            <div class="example-container">
+                <div class="example-card" data-example="hashmap">
+                    <h3>HashMap</h3>
+                    <p>Быстрая карта ключ-значение</p>
+                    <button class="run-example">Запустить пример</button>
+                </div>
+                <div class="example-card" data-example="linkedhashmap">
+                    <h3>LinkedHashMap</h3>
+                    <p>HashMap с сохранением порядка</p>
+                    <button class="run-example">Запустить пример</button>
+                </div>
+                <div class="example-card" data-example="treemap">
+                    <h3>TreeMap</h3>
+                    <p>Автоматически сортированная карта</p>
+                    <button class="run-example">Запустить пример</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="queue" class="tab-content">
+            <h2>Очереди (Queue)</h2>
+            <div class="example-container">
+                <div class="example-card" data-example="emergency">
+                    <h3>PriorityQueue</h3>
+                    <p>Очередь с приоритетом (пример с больницей)</p>
+                    <button class="run-example">Запустить пример</button>
+                </div>
+                <div class="example-card" data-example="concurrent">
+                    <h3>Concurrent Collections</h3>
+                    <p>Многопоточные коллекции</p>
+                    <button class="run-example">Запустить пример</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="streams" class="tab-content">
+            <h2>Stream API</h2>
+            <div class="example-container">
+                <div class="example-card" data-example="streams">
+                    <h3>Stream API</h3>
+                    <p>Функциональная обработка коллекций</p>
+                    <button class="run-example">Запустить пример</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="utils" class="tab-content">
+            <h2>Утилиты</h2>
+            <div class="example-container">
+                <div class="example-card" data-example="collections">
+                    <h3>Collections Utility</h3>
+                    <p>Полезные методы для работы с коллекциями</p>
+                    <button class="run-example">Запустить пример</button>
+                </div>
+                <div class="example-card" data-example="comparator">
+                    <h3>Comparator</h3>
+                    <p>Сравнение и сортировка объектов</p>
+                    <button class="run-example">Запустить пример</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="output-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modal-title">Результат выполнения</h3>
+            <div class="code-section">
+                <h4>Исходный код:</h4>
+                <pre><code id="source-code"></code></pre>
+            </div>
+            <div class="output-section">
+                <h4>Вывод программы:</h4>
+                <pre id="program-output"></pre>
+            </div>
+            <div class="explanation-section">
+                <h4>Объяснение:</h4>
+                <div id="explanation"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
