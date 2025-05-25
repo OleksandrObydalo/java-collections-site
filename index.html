@@ -1,129 +1,134 @@
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java Collections - Интерактивное Обучение</title>
+    <title data-en="Java Collections - Interactive Learning" data-uk="Java Колекції - Інтерактивне Навчання" data-de="Java Collections - Interaktives Lernen">Java Collections - Interactive Learning</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Java Collections Framework</h1>
-        <p>Изучение коллекций Java на практических примерах</p>
+        <div class="language-switcher">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="uk">UK</button>
+            <button class="lang-btn" data-lang="de">DE</button>
+        </div>
+        <h1 data-en="Java Collections Framework" data-uk="Java Collections Framework" data-de="Java Collections Framework">Java Collections Framework</h1>
+        <p data-en="Learning Java collections through practical examples" data-uk="Вивчення колекцій Java на практичних прикладах" data-de="Java-Collections durch praktische Beispiele lernen">Learning Java collections through practical examples</p>
     </header>
 
     <nav class="tabs">
-        <button class="tab-button active" data-tab="overview">Обзор</button>
-        <button class="tab-button" data-tab="list">List</button>
-        <button class="tab-button" data-tab="set">Set</button>
-        <button class="tab-button" data-tab="map">Map</button>
-        <button class="tab-button" data-tab="queue">Queue</button>
-        <button class="tab-button" data-tab="streams">Streams</button>
-        <button class="tab-button" data-tab="utils">Утилиты</button>
+        <button class="tab-button active" data-tab="overview" data-en="Overview" data-uk="Огляд" data-de="Überblick">Overview</button>
+        <button class="tab-button" data-tab="list" data-en="List" data-uk="List" data-de="Liste">List</button>
+        <button class="tab-button" data-tab="set" data-en="Set" data-uk="Set" data-de="Set">Set</button>
+        <button class="tab-button" data-tab="map" data-en="Map" data-uk="Map" data-de="Map">Map</button>
+        <button class="tab-button" data-tab="queue" data-en="Queue" data-uk="Queue" data-de="Warteschlange">Queue</button>
+        <button class="tab-button" data-tab="streams" data-en="Streams" data-uk="Streams" data-de="Streams">Streams</button>
+        <button class="tab-button" data-tab="utils" data-en="Utils" data-uk="Утиліти" data-de="Hilfsmittel">Utils</button>
     </nav>
 
     <main>
         <div id="overview" class="tab-content active">
-            <h2>Обзор Java Collections Framework</h2>
+            <h2 data-en="Java Collections Framework Overview" data-uk="Огляд Java Collections Framework" data-de="Java Collections Framework Überblick">Java Collections Framework Overview</h2>
             <div class="collections-diagram">
                 <div class="collection-type">
-                    <h3>List (Списки)</h3>
+                    <h3 data-en="List (Lists)" data-uk="List (Списки)" data-de="List (Listen)">List (Lists)</h3>
                     <ul>
-                        <li>ArrayList - быстрый доступ по индексу</li>
-                        <li>LinkedList - быстрая вставка/удаление</li>
-                        <li>Deque - двусторонняя очередь</li>
+                        <li data-en="ArrayList - fast access by index" data-uk="ArrayList - швидкий доступ за індексом" data-de="ArrayList - schneller Zugriff per Index">ArrayList - fast access by index</li>
+                        <li data-en="LinkedList - fast insertion/deletion" data-uk="LinkedList - швидка вставка/видалення" data-de="LinkedList - schnelles Einfügen/Löschen">LinkedList - fast insertion/deletion</li>
+                        <li data-en="Deque - double-ended queue" data-uk="Deque - двостороння черга" data-de="Deque - doppelseitige Warteschlange">Deque - double-ended queue</li>
                     </ul>
                 </div>
                 <div class="collection-type">
-                    <h3>Set (Множества)</h3>
+                    <h3 data-en="Set (Sets)" data-uk="Set (Множини)" data-de="Set (Mengen)">Set (Sets)</h3>
                     <ul>
-                        <li>HashSet - быстрый поиск</li>
-                        <li>LinkedHashSet - порядок вставки</li>
-                        <li>TreeSet - сортированное множество</li>
+                        <li data-en="HashSet - fast search" data-uk="HashSet - швидкий пошук" data-de="HashSet - schnelle Suche">HashSet - fast search</li>
+                        <li data-en="LinkedHashSet - insertion order" data-uk="LinkedHashSet - порядок вставки" data-de="LinkedHashSet - Einfügereihenfolge">LinkedHashSet - insertion order</li>
+                        <li data-en="TreeSet - sorted set" data-uk="TreeSet - сортована множина" data-de="TreeSet - sortierte Menge">TreeSet - sorted set</li>
                     </ul>
                 </div>
                 <div class="collection-type">
-                    <h3>Map (Карты)</h3>
+                    <h3 data-en="Map (Maps)" data-uk="Map (Карти)" data-de="Map (Karten)">Map (Maps)</h3>
                     <ul>
-                        <li>HashMap - быстрый доступ по ключу</li>
-                        <li>LinkedHashMap - порядок вставки</li>
-                        <li>TreeMap - сортированная карта</li>
+                        <li data-en="HashMap - fast access by key" data-uk="HashMap - швидкий доступ за ключем" data-de="HashMap - schneller Zugriff per Schlüssel">HashMap - fast access by key</li>
+                        <li data-en="LinkedHashMap - insertion order" data-uk="LinkedHashMap - порядок вставки" data-de="LinkedHashMap - Einfügereihenfolge">LinkedHashMap - insertion order</li>
+                        <li data-en="TreeMap - sorted map" data-uk="TreeMap - сортована карта" data-de="TreeMap - sortierte Karte">TreeMap - sorted map</li>
                     </ul>
                 </div>
                 <div class="collection-type">
-                    <h3>Queue (Очереди)</h3>
+                    <h3 data-en="Queue (Queues)" data-uk="Queue (Черги)" data-de="Queue (Warteschlangen)">Queue (Queues)</h3>
                     <ul>
-                        <li>PriorityQueue - очередь с приоритетом</li>
-                        <li>ConcurrentLinkedQueue - многопоточная</li>
+                        <li data-en="PriorityQueue - priority queue" data-uk="PriorityQueue - черга з пріоритетом" data-de="PriorityQueue - Prioritätswarteschlange">PriorityQueue - priority queue</li>
+                        <li data-en="ConcurrentLinkedQueue - thread-safe" data-uk="ConcurrentLinkedQueue - багатопоточна" data-de="ConcurrentLinkedQueue - thread-sicher">ConcurrentLinkedQueue - thread-safe</li>
                     </ul>
                 </div>
             </div>
         </div>
 
         <div id="list" class="tab-content">
-            <h2>Списки (List)</h2>
+            <h2 data-en="Lists" data-uk="Списки" data-de="Listen">Lists</h2>
             <div class="example-container">
                 <div class="example-card" data-example="deque">
                     <h3>Deque (ArrayDeque)</h3>
-                    <p>Двусторонняя очередь - добавление и удаление с обеих сторон</p>
-                    <button class="run-example">Запустить пример</button>
+                    <p data-en="Double-ended queue - add and remove from both ends" data-uk="Двостороння черга - додавання та видалення з обох кінців" data-de="Doppelseitige Warteschlange - Hinzufügen und Entfernen von beiden Enden">Double-ended queue - add and remove from both ends</p>
+                    <button class="run-example" data-en="Run Example" data-uk="Запустити приклад" data-de="Beispiel ausführen">Run Example</button>
                 </div>
             </div>
         </div>
 
         <div id="set" class="tab-content">
-            <h2>Множества (Set)</h2>
+            <h2 data-en="Sets" data-uk="Множини" data-de="Mengen">Sets</h2>
             <div class="example-container">
                 <div class="example-card" data-example="hashset">
                     <h3>HashSet</h3>
-                    <p>Быстрое множество без дубликатов</p>
-                    <button class="run-example">Запустить пример</button>
+                    <p data-en="Fast set without duplicates" data-uk="Швидка множина без дублікатів" data-de="Schnelle Menge ohne Duplikate">Fast set without duplicates</p>
+                    <button class="run-example" data-en="Run Example" data-uk="Запустити приклад" data-de="Beispiel ausführen">Run Example</button>
                 </div>
                 <div class="example-card" data-example="linkedhashset">
                     <h3>LinkedHashSet</h3>
-                    <p>HashSet с сохранением порядка вставки</p>
-                    <button class="run-example">Запустить пример</button>
+                    <p data-en="HashSet with insertion order preservation" data-uk="HashSet зі збереженням порядку вставки" data-de="HashSet mit Erhaltung der Einfügereihenfolge">HashSet with insertion order preservation</p>
+                    <button class="run-example" data-en="Run Example" data-uk="Запустити приклад" data-de="Beispiel ausführen">Run Example</button>
                 </div>
                 <div class="example-card" data-example="treeset">
                     <h3>TreeSet</h3>
-                    <p>Автоматически сортированное множество</p>
-                    <button class="run-example">Запустить пример</button>
+                    <p data-en="Automatically sorted set" data-uk="Автоматично сортована множина" data-de="Automatisch sortierte Menge">Automatically sorted set</p>
+                    <button class="run-example" data-en="Run Example" data-uk="Запустити приклад" data-de="Beispiel ausführen">Run Example</button>
                 </div>
             </div>
         </div>
 
         <div id="map" class="tab-content">
-            <h2>Карты (Map)</h2>
+            <h2 data-en="Maps" data-uk="Карти" data-de="Karten">Maps</h2>
             <div class="example-container">
                 <div class="example-card" data-example="hashmap">
                     <h3>HashMap</h3>
-                    <p>Быстрая карта ключ-значение</p>
-                    <button class="run-example">Запустить пример</button>
+                    <p data-en="Fast key-value map" data-uk="Швидка карта ключ-значення" data-de="Schnelle Schlüssel-Wert-Karte">Fast key-value map</p>
+                    <button class="run-example" data-en="Run Example" data-uk="Запустити приклад" data-de="Beispiel ausführen">Run Example</button>
                 </div>
                 <div class="example-card" data-example="linkedhashmap">
                     <h3>LinkedHashMap</h3>
-                    <p>HashMap с сохранением порядка</p>
-                    <button class="run-example">Запустить пример</button>
+                    <p data-en="HashMap with order preservation" data-uk="HashMap зі збереженням порядку" data-de="HashMap mit Reihenfolgenerhaltung">HashMap with order preservation</p>
+                    <button class="run-example" data-en="Run Example" data-uk="Запустити приклад" data-de="Beispiel ausführen">Run Example</button>
                 </div>
                 <div class="example-card" data-example="treemap">
                     <h3>TreeMap</h3>
-                    <p>Автоматически сортированная карта</p>
-                    <button class="run-example">Запустить пример</button>
+                    <p data-en="Automatically sorted map" data-uk="Автоматично сортована карта" data-de="Automatisch sortierte Karte">Automatically sorted map</p>
+                    <button class="run-example" data-en="Run Example" data-uk="Запустити приклад" data-de="Beispiel ausführen">Run Example</button>
                 </div>
             </div>
         </div>
 
         <div id="queue" class="tab-content">
-            <h2>Очереди (Queue)</h2>
+            <h2 data-en="Queues" data-uk="Черги" data-de="Warteschlangen">Queues</h2>
             <div class="example-container">
                 <div class="example-card" data-example="emergency">
                     <h3>PriorityQueue</h3>
-                    <p>Очередь с приоритетом (пример с больницей)</p>
-                    <button class="run-example">Запустить пример</button>
+                    <p data-en="Priority queue (hospital example)" data-uk="Черга з пріоритетом (приклад з лікарнею)" data-de="Prioritätswarteschlange (Krankenhaus-Beispiel)">Priority queue (hospital example)</p>
+                    <button class="run-example" data-en="Run Example" data-uk="Запустити приклад" data-de="Beispiel ausführen">Run Example</button>
                 </div>
                 <div class="example-card" data-example="concurrent">
                     <h3>Concurrent Collections</h3>
-                    <p>Многопоточные коллекции</p>
-                    <button class="run-example">Запустить пример</button>
+                    <p data-en="Thread-safe collections" data-uk="Багатопоточні колекції" data-de="Thread-sichere Sammlungen">Thread-safe collections</p>
+                    <button class="run-example" data-en="Run Example" data-uk="Запустити приклад" data-de="Beispiel ausführen">Run Example</button>
                 </div>
             </div>
         </div>
@@ -133,24 +138,24 @@
             <div class="example-container">
                 <div class="example-card" data-example="streams">
                     <h3>Stream API</h3>
-                    <p>Функциональная обработка коллекций</p>
-                    <button class="run-example">Запустить пример</button>
+                    <p data-en="Functional collection processing" data-uk="Функціональна обробка колекцій" data-de="Funktionale Sammlungsverarbeitung">Functional collection processing</p>
+                    <button class="run-example" data-en="Run Example" data-uk="Запустити приклад" data-de="Beispiel ausführen">Run Example</button>
                 </div>
             </div>
         </div>
 
         <div id="utils" class="tab-content">
-            <h2>Утилиты</h2>
+            <h2 data-en="Utilities" data-uk="Утиліти" data-de="Hilfsmittel">Utilities</h2>
             <div class="example-container">
                 <div class="example-card" data-example="collections">
                     <h3>Collections Utility</h3>
-                    <p>Полезные методы для работы с коллекциями</p>
-                    <button class="run-example">Запустить пример</button>
+                    <p data-en="Useful methods for working with collections" data-uk="Корисні методи для роботи з колекціями" data-de="Nützliche Methoden für die Arbeit mit Sammlungen">Useful methods for working with collections</p>
+                    <button class="run-example" data-en="Run Example" data-uk="Запустити приклад" data-de="Beispiel ausführen">Run Example</button>
                 </div>
                 <div class="example-card" data-example="comparator">
                     <h3>Comparator</h3>
-                    <p>Сравнение и сортировка объектов</p>
-                    <button class="run-example">Запустить пример</button>
+                    <p data-en="Object comparison and sorting" data-uk="Порівняння та сортування об'єктів" data-de="Objektvergleich und Sortierung">Object comparison and sorting</p>
+                    <button class="run-example" data-en="Run Example" data-uk="Запустити приклад" data-de="Beispiel ausführen">Run Example</button>
                 </div>
             </div>
         </div>
@@ -159,17 +164,17 @@
     <div id="output-modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h3 id="modal-title">Результат выполнения</h3>
+            <h3 id="modal-title" data-en="Execution Result" data-uk="Результат виконання" data-de="Ausführungsergebnis">Execution Result</h3>
             <div class="code-section">
-                <h4>Исходный код:</h4>
+                <h4 data-en="Source Code:" data-uk="Вихідний код:" data-de="Quellcode:">Source Code:</h4>
                 <pre><code id="source-code"></code></pre>
             </div>
             <div class="output-section">
-                <h4>Вывод программы:</h4>
+                <h4 data-en="Program Output:" data-uk="Вивід програми:" data-de="Programmausgabe:">Program Output:</h4>
                 <pre id="program-output"></pre>
             </div>
             <div class="explanation-section">
-                <h4>Объяснение:</h4>
+                <h4 data-en="Explanation:" data-uk="Пояснення:" data-de="Erklärung:">Explanation:</h4>
                 <div id="explanation"></div>
             </div>
         </div>

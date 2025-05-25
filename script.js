@@ -1,3 +1,106 @@
+// Language translations
+const translations = {
+    en: {
+        deque: {
+            title: "Deque (ArrayDeque) - Double-ended queue",
+            explanation: `
+                <p><strong>ArrayDeque</strong> is an implementation of the Deque interface (double-ended queue) that allows adding and removing elements from both ends of the queue.</p>
+                <h4>Main methods:</h4>
+                <ul>
+                    <li><code>addFirst()</code> - add element to the beginning</li>
+                    <li><code>addLast()</code> - add element to the end</li>
+                    <li><code>removeFirst()</code> - remove and return first element</li>
+                    <li><code>removeLast()</code> - remove and return last element</li>
+                    <li><code>peekFirst()</code> - view first element without removal</li>
+                    <li><code>peekLast()</code> - view last element without removal</li>
+                </ul>
+                <p><strong>Applications:</strong> Stacks, queues, undo operations, caching.</p>
+            `
+        },
+        hashset: {
+            title: "HashSet - Fast set",
+            explanation: `
+                <p><strong>HashSet</strong> is a Set implementation based on hash table. It doesn't allow duplicates and doesn't guarantee element order.</p>
+                <h4>Features:</h4>
+                <ul>
+                    <li><strong>Access time:</strong> O(1) average for add, remove, contains</li>
+                    <li><strong>Order:</strong> Not guaranteed</li>
+                    <li><strong>Null values:</strong> Allows one null value</li>
+                    <li><strong>Thread safety:</strong> Not thread-safe</li>
+                </ul>
+                <p><strong>Application:</strong> When fast membership checking is needed.</p>
+            `
+        }
+    },
+    uk: {
+        deque: {
+            title: "Deque (ArrayDeque) - Двостороння черга",
+            explanation: `
+                <p><strong>ArrayDeque</strong> - це реалізація інтерфейсу Deque (double-ended queue), яка дозволяє додавати та видаляти елементи з обох кінців черги.</p>
+                <h4>Основні методи:</h4>
+                <ul>
+                    <li><code>addFirst()</code> - додати елемент на початок</li>
+                    <li><code>addLast()</code> - додати елемент в кінець</li>
+                    <li><code>removeFirst()</code> - видалити та повернути перший елемент</li>
+                    <li><code>removeLast()</code> - видалити та повернути останній елемент</li>
+                    <li><code>peekFirst()</code> - подивитися перший елемент без видалення</li>
+                    <li><code>peekLast()</code> - подивитися останній елемент без видалення</li>
+                </ul>
+                <p><strong>Застосування:</strong> Стеки, черги, скасування операцій (undo), кешування.</p>
+            `
+        },
+        hashset: {
+            title: "HashSet - Швидка множина",
+            explanation: `
+                <p><strong>HashSet</strong> - реалізація Set на основі хеш-таблиці. Не допускає дублікатів і не гарантує порядок елементів.</p>
+                <h4>Особливості:</h4>
+                <ul>
+                    <li><strong>Час доступу:</strong> O(1) в середньому для add, remove, contains</li>
+                    <li><strong>Порядок:</strong> Не гарантується</li>
+                    <li><strong>Null-значення:</strong> Допускає одне null значення</li>
+                    <li><strong>Потокобезпека:</strong> Не потокобезпечний</li>
+                </ul>
+                <p><strong>Застосування:</strong> Коли потрібна швидка перевірка на належність множині.</p>
+            `
+        }
+    },
+    de: {
+        deque: {
+            title: "Deque (ArrayDeque) - Doppelseitige Warteschlange",
+            explanation: `
+                <p><strong>ArrayDeque</strong> ist eine Implementierung des Deque-Interfaces (double-ended queue), die das Hinzufügen und Entfernen von Elementen an beiden Enden der Warteschlange ermöglicht.</p>
+                <h4>Hauptmethoden:</h4>
+                <ul>
+                    <li><code>addFirst()</code> - Element am Anfang hinzufügen</li>
+                    <li><code>addLast()</code> - Element am Ende hinzufügen</li>
+                    <li><code>removeFirst()</code> - erstes Element entfernen und zurückgeben</li>
+                    <li><code>removeLast()</code> - letztes Element entfernen und zurückgeben</li>
+                    <li><code>peekFirst()</code> - erstes Element anzeigen ohne Entfernung</li>
+                    <li><code>peekLast()</code> - letztes Element anzeigen ohne Entfernung</li>
+                </ul>
+                <p><strong>Anwendungen:</strong> Stapel, Warteschlangen, Rückgängig-Operationen, Zwischenspeicherung.</p>
+            `
+        },
+        hashset: {
+            title: "HashSet - Schnelle Menge",
+            explanation: `
+                <p><strong>HashSet</strong> ist eine Set-Implementierung basierend auf Hash-Tabelle. Sie erlaubt keine Duplikate und garantiert keine Elementreihenfolge.</p>
+                <h4>Eigenschaften:</h4>
+                <ul>
+                    <li><strong>Zugriffszeit:</strong> O(1) durchschnittlich für add, remove, contains</li>
+                    <li><strong>Reihenfolge:</strong> Nicht garantiert</li>
+                    <li><strong>Null-Werte:</strong> Erlaubt einen null-Wert</li>
+                    <li><strong>Thread-Sicherheit:</strong> Nicht thread-sicher</li>
+                </ul>
+                <p><strong>Anwendung:</strong> Wenn schnelle Mitgliedschaftsprüfung benötigt wird.</p>
+            `
+        }
+    }
+};
+
+// Current language
+let currentLanguage = 'en';
+
 // Данные примеров из Java файлов
 const examples = {
     deque: {
@@ -173,7 +276,7 @@ public class TreeSetExample {
         System.out.println("Первый элемент: " + treeSet.first());
         System.out.println("Последний элемент: " + treeSet.last());
         System.out.println("Элементы меньше 50: " + treeSet.headSet(50));
-        System.out.println("Элементы больше или равные 50: " + treeSet.tailSet(50));
+        System.out.println("Элементы >= 50: " + treeSet.tailSet(50));
         System.out.println("Элементы от 30 до 70: " + treeSet.subSet(30, 70));
         
         // Поиск ближайших элементов
@@ -185,7 +288,7 @@ public class TreeSetExample {
 Первый элемент: 20
 Последний элемент: 80
 Элементы меньше 50: [20, 30, 40]
-Элементы больше или равные 50: [50, 60, 70, 80]
+Элементы >= 50: [50, 60, 70, 80]
 Элементы от 30 до 70: [30, 40, 50, 60]
 Наибольший элемент <= 45: 40
 Наименьший элемент >= 45: 50`,
@@ -382,7 +485,7 @@ public class TreeMapExample {
             <ul>
                 <li><strong>Время операций:</strong> O(log n) для основных операций</li>
                 <li><strong>Сортировка:</strong> По естественному порядку ключей или с помощью Comparator</li>
-                <li><strong>Навигация:</strong> Богатый набор методов для поиска и получения диапазонов</li>
+                <li><strong>Навигация:</strong> Богатый набор методов для поиска ближайших элементов</li>
                 <li><strong>Null-ключи:</strong> Не допускает null ключи</li>
             </ul>
             <p><strong>Применение:</strong> Когда нужна отсортированная карта с возможностью навигации по ключам.</p>
@@ -682,10 +785,10 @@ Food: [Coffee($12.99), Tea($8.99)]
 Electronics: [Laptop($999.99), Phone($699.99), Tablet($399.99)]
 
 Статистика цен:
-Средняя цена: $358.65
+Средняя цена: $348.32
 Минимальная цена: $8.99
 Максимальная цена: $999.99
-Общая стоимость: $2151.94
+Общая стоимость: $2089.94
 
 Самый дорогой: Laptop($999.99)`,
         explanation: `
@@ -781,12 +884,12 @@ public class CollectionsUtilityExample {
 Перемешанный: [Date, Apple, Elderberry, Cherry, Banana]
 Cherry найден на позиции: 2
 Замена всех на X: [X, X, X, X, X]
-Копия: [Apple, Banana, Cherry, Date, Elderberry]
-Поворот на 2 позиции: [Date, Elderberry, Apple, Banana, Cherry]
+Копия: [Date, Apple, Elderberry, Cherry, Banana]
+Поворот на 2 позиции: [Cherry, Banana, Date, Apple, Elderberry]
 Минимум: Apple
 Максимум: Elderberry
 Частота A: 3
-Неизменяемый список: [Date, Elderberry, Apple, Banana, Cherry]
+Неизменяемый список: [Cherry, Banana, Date, Apple, Elderberry]
 Синхронизированный список: [Thread-safe item]
 Пустые коллекции созданы: 0, 0, 0`,
         explanation: `
@@ -970,13 +1073,64 @@ Mathematics:
     }
 };
 
+// Language switching functionality
+function switchLanguage(lang) {
+    currentLanguage = lang;
+    
+    // Update language buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+    
+    // Update all elements with language attributes
+    document.querySelectorAll('[data-' + lang + ']').forEach(element => {
+        const text = element.getAttribute('data-' + lang);
+        if (element.tagName === 'TITLE') {
+            element.textContent = text;
+        } else {
+            element.textContent = text;
+        }
+    });
+    
+    // Update document language
+    document.documentElement.lang = lang === 'uk' ? 'uk' : lang === 'de' ? 'de' : 'en';
+}
+
+// Update showExample function to use translations
+window.showExample = function(exampleType) {
+    const example = examples[exampleType];
+    if (!example) return;
+
+    // Use translation if available
+    const translation = translations[currentLanguage] && translations[currentLanguage][exampleType];
+    const title = translation ? translation.title : example.title;
+    const explanation = translation ? translation.explanation : example.explanation;
+
+    document.getElementById('modal-title').textContent = title;
+    document.getElementById('source-code').textContent = example.code;
+    document.getElementById('program-output').textContent = example.output;
+    document.getElementById('explanation').innerHTML = explanation;
+
+    modal.style.display = 'block';
+}
+
+let modal;
+
 // Управление вкладками
 document.addEventListener('DOMContentLoaded', function() {
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabContents = document.querySelectorAll('.tab-content');
-    const modal = document.getElementById('output-modal');
+    modal = document.getElementById('output-modal'); 
     const closeBtn = document.querySelector('.close');
     const runButtons = document.querySelectorAll('.run-example');
+    const langButtons = document.querySelectorAll('.lang-btn');
+
+    // Language switching
+    langButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            switchLanguage(button.dataset.lang);
+        });
+    });
 
     // Переключение вкладок
     tabButtons.forEach(button => {
@@ -1011,17 +1165,4 @@ document.addEventListener('DOMContentLoaded', function() {
             modal.style.display = 'none';
         }
     });
-
-    function showExample(exampleType) {
-        const example = examples[exampleType];
-        if (!example) return;
-
-        document.getElementById('modal-title').textContent = example.title;
-        document.getElementById('source-code').textContent = example.code;
-        document.getElementById('program-output').textContent = example.output;
-        document.getElementById('explanation').innerHTML = example.explanation;
-
-        modal.style.display = 'block';
-    }
 });
-
