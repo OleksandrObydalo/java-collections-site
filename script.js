@@ -36,31 +36,31 @@ const translations = {
         deque: {
             title: "Deque (ArrayDeque) - Двостороння черга",
             explanation: `
-                <p><strong>ArrayDeque</strong> - це реалізація інтерфейсу Deque (double-ended queue), яка дозволяє додавати та видаляти елементи з обох кінців черги.</p>
-                <h4>Основні методи:</h4>
+                <p><strong>ArrayDeque</strong> - це реалізація інтерфейсу Deque (double-ended queue), яка дозволяє додаватта та втадалятта елементта з обох кінців чергта.</p>
+                <h4>Основні методта:</h4>
                 <ul>
-                    <li><code>addFirst()</code> - додати елемент на початок</li>
-                    <li><code>addLast()</code> - додати елемент в кінець</li>
-                    <li><code>removeFirst()</code> - видалити та повернути перший елемент</li>
-                    <li><code>removeLast()</code> - видалити та повернути останній елемент</li>
-                    <li><code>peekFirst()</code> - подивитися перший елемент без видалення</li>
-                    <li><code>peekLast()</code> - подивитися останній елемент без видалення</li>
+                    <li><code>addFirst()</code> - додатта елемент на початок</li>
+                    <li><code>addLast()</code> - додатта елемент в кінець</li>
+                    <li><code>removeFirst()</code> - втадалтатта та повернутта перштай елемент</li>
+                    <li><code>removeLast()</code> - втадалтатта та повернутта останній елемент</li>
+                    <li><code>peekFirst()</code> - подтавтаттася перштай елемент без Видалення</li>
+                    <li><code>peekLast()</code> - подтавтаттася останній елемент без Видалення</li>
                 </ul>
-                <p><strong>Застосування:</strong> Стеки, черги, скасування операцій (undo), кешування.</p>
+                <p><strong>Застосування:</strong> Стекта, чергта, скасування операцій (undo), кешування.</p>
             `
         },
         hashset: {
-            title: "HashSet - Швидка множина",
+            title: "HashSet - Швтадка множтана",
             explanation: `
-                <p><strong>HashSet</strong> - реалізація Set на основі хеш-таблиці. Не допускає дублікатів і не гарантує порядок елементів.</p>
-                <h4>Особливості:</h4>
+                <p><strong>HashSet</strong> - реалізація Set на основі хеш-таблтаці. Не допускає дублікатів і не гарантує порядок елементів.</p>
+                <h4>Особлтавості:</h4>
                 <ul>
                     <li><strong>Час доступу:</strong> O(1) в середньому для add, remove, contains</li>
                     <li><strong>Порядок:</strong> Не гарантується</li>
                     <li><strong>Null-значення:</strong> Допускає одне null значення</li>
-                    <li><strong>Потокобезпека:</strong> Не потокобезпечний</li>
+                    <li><strong>Потокобезпека:</strong> Не потокобезпечнтай</li>
                 </ul>
-                <p><strong>Застосування:</strong> Коли потрібна швидка перевірка на належність множині.</p>
+                <p><strong>Застосування:</strong> Колта потрібна швтадка перевірка на належність множтані.</p>
             `
         }
     },
@@ -101,109 +101,109 @@ const translations = {
 // Current language
 let currentLanguage = 'en';
 
-// Данные примеров из Java файлов
+// Дані пртакладів з Java файлів
 const examples = {
     deque: {
-        title: "Deque (ArrayDeque) - Двусторонняя очередь",
+        title: "Deque (ArrayDeque) - Двостороння черга",
         code: `import java.util.*;
 
 public class DequeExample {
     public static void main(String[] args) {
-        // Создание ArrayDeque
+        // Створення ArrayDeque
         Deque<String> deque = new ArrayDeque<>();
         
-        // Добавление элементов с начала
-        deque.addFirst("Второй");
-        deque.addFirst("Первый");
+        // Додавання елементів з початку
+        deque.addFirst("Другій");
+        deque.addFirst("Перштай");
         
-        // Добавление элементов в конец
-        deque.addLast("Третий");
-        deque.addLast("Четвертый");
+        // Додавання елементів в конец
+        deque.addLast("Третій");
+        deque.addLast("Четверттай");
         
         System.out.println("Deque: " + deque);
         
-        // Удаление с начала и конца
-        System.out.println("Удален с начала: " + deque.removeFirst());
-        System.out.println("Удален с конца: " + deque.removeLast());
+        // Видалення з початку та кінця
+        System.out.println("Втадалено з початку: " + deque.removeFirst());
+        System.out.println("Втадалено з кінця: " + deque.removeLast());
         
-        System.out.println("Deque после удаления: " + deque);
+        System.out.println("Deque після Видалення: " + deque);
         
-        // Просмотр без удаления
-        System.out.println("Первый элемент: " + deque.peekFirst());
-        System.out.println("Последний элемент: " + deque.peekLast());
+        // Перегляд без Видалення
+        System.out.println("Першій елемент: " + deque.peekFirst());
+        System.out.println("Останній елемент: " + deque.peekLast());
     }
 }`,
-        output: `Deque: [Первый, Второй, Третий, Четвертый]
-Удален с начала: Первый
-Удален с конца: Четвертый
-Deque после удаления: [Второй, Третий]
-Первый элемент: Второй
-Последний элемент: Третий`,
+        output: `Deque: [Перщій, Другій, Третій, Четверттай]
+Втадалено з початку: Першій
+Втадалено з кінця: Четверттай
+Deque після Видалення: [Другій, Третій]
+Перштай елемент: Другій
+Останній елемент: Третій`,
         explanation: `
-            <p><strong>ArrayDeque</strong> - это реализация интерфейса Deque (double-ended queue), которая позволяет добавлять и удалять элементы с обеих сторон очереди.</p>
-            <h4>Основные методы:</h4>
+            <p><strong>ArrayDeque</strong> - це реалізація інтерфейсу Deque (double-ended queue), яка дозволяє додаватта та втадалятта елементта з обох сторін чергта.</p>
+            <h4>Основні методта:</h4>
             <ul>
-                <li><code>addFirst()</code> - добавить элемент в начало</li>
-                <li><code>addLast()</code> - добавить элемент в конец</li>
-                <li><code>removeFirst()</code> - удалить и вернуть первый элемент</li>
-                <li><code>removeLast()</code> - удалить и вернуть последний элемент</li>
-                <li><code>peekFirst()</code> - посмотреть первый элемент без удаления</li>
-                <li><code>peekLast()</code> - посмотреть последний элемент без удаления</li>
+                <li><code>addFirst()</code> - добавтатта элемент на початок</li>
+                <li><code>addLast()</code> - добавтатта элемент в конець</li>
+                <li><code>removeFirst()</code> - втадалтатта та повернутта перштай элемент</li>
+                <li><code>removeLast()</code> - втадалтатта та повернутта останній элемент</li>
+                <li><code>peekFirst()</code> - подтавтаттася перштай элемент без Видалення</li>
+                <li><code>peekLast()</code> - подтавтаттася останній элемент без Видалення</li>
             </ul>
-            <p><strong>Применение:</strong> Стеки, очереди, отмена операций (undo), кэширование.</p>
+            <p><strong>Застосування:</strong> Стекта, чергта, скасування операцій (undo), кешування.</p>
         `
     },
     
     hashset: {
-        title: "HashSet - Быстрое множество",
+        title: "HashSet - Швтадка множена",
         code: `import java.util.*;
 
 public class HashSetExample {
     public static void main(String[] args) {
         Set<String> set = new HashSet<>();
         
-        // Добавление элементов
+        // Додавання елементів
         set.add("Apple");
         set.add("Banana");
         set.add("Cherry");
-        set.add("Apple"); // Дубликат - не добавится
+        set.add("Apple"); // Дублтакат - не добавтатся
         
         System.out.println("HashSet: " + set);
-        System.out.println("Размер: " + set.size());
+        System.out.println("Розмір: " + set.size());
         
-        // Проверка наличия элемента
-        System.out.println("Содержит Apple: " + set.contains("Apple"));
-        System.out.println("Содержит Orange: " + set.contains("Orange"));
+        // Перевірка наявності елемента
+        System.out.println("Місттать Apple: " + set.contains("Apple"));
+        System.out.println("Місттать Orange: " + set.contains("Orange"));
         
-        // Удаление элемента
+        // Видалення элемента
         set.remove("Banana");
-        System.out.println("После удаления Banana: " + set);
+        System.out.println("Після Видалення Banana: " + set);
         
-        // Итерация
-        System.out.println("Элементы:");
+        // татерацтая
+        System.out.println("Елементта:");
         for (String item : set) {
             System.out.println("- " + item);
         }
     }
 }`,
         output: `HashSet: [Apple, Cherry, Banana]
-Размер: 3
-Содержит Apple: true
-Содержит Orange: false
-После удаления Banana: [Apple, Cherry]
-Элементы:
+Розмір: 3
+Місттать Apple: true
+Місттать Orange: false
+Після Видалення Banana: [Apple, Cherry]
+Елементта:
 - Apple
 - Cherry`,
         explanation: `
-            <p><strong>HashSet</strong> - реализация Set на основе хеш-таблицы. Не допускает дубликатов и не гарантирует порядок элементов.</p>
-            <h4>Особенности:</h4>
+            <p><strong>HashSet</strong> - реалізація на основі хеш-таблтаці. Не допускає дублікатів та не гарантує порядок елементів.</p>
+            <h4>Особенността:</h4>
             <ul>
-                <li><strong>Время доступа:</strong> O(1) в среднем для add, remove, contains</li>
-                <li><strong>Порядок:</strong> Не гарантируется</li>
-                <li><strong>Null-значения:</strong> Допускает одно null значение</li>
-                <li><strong>Потокобезопасность:</strong> Не потокобезопасен</li>
+                <li><strong>Час доступу:</strong> O(1) в среднем для add, remove, contains</li>
+                <li><strong>Порядок:</strong> Не гарантуется</li>
+                <li><strong>Null-значентая:</strong> Допускає одно null значення</li>
+                <li><strong>Потокобезопасность:</strong> Не потокобезпечнтай</li>
             </ul>
-            <p><strong>Применение:</strong> Когда нужна быстрая проверка на принадлежность множеству.</p>
+            <p><strong>Застосування:</strong> Колта потрібна швтадка перевірка на пртаналежність до множента.</p>
         `
     },
     
@@ -216,7 +216,7 @@ public class LinkedHashSetExample {
         Set<String> linkedHashSet = new LinkedHashSet<>();
         Set<String> hashSet = new HashSet<>();
         
-        // Добавление элементов в том же порядке
+        // Додавання елементів в том же порядке
         String[] items = {"Cherry", "Apple", "Banana", "Date"};
         
         for (String item : items) {
@@ -224,44 +224,44 @@ public class LinkedHashSetExample {
             hashSet.add(item);
         }
         
-        System.out.println("LinkedHashSet (сохраняет порядок): " + linkedHashSet);
-        System.out.println("HashSet (порядок не гарантирован): " + hashSet);
+        System.out.println("LinkedHashSet (зберігає порядок): " + linkedHashSet);
+        System.out.println("HashSet (порядок не гарантован): " + hashSet);
         
-        // Попытка добавить дубликат
+        // Попытка добавтать дублтакат
         linkedHashSet.add("Apple");
-        System.out.println("После попытки добавить дубликат: " + linkedHashSet);
+        System.out.println("Після спробта додатта дублікат: " + linkedHashSet);
         
-        // Удаление и добавление элемента
+        // Видалення та додавання элемента
         linkedHashSet.remove("Banana");
         linkedHashSet.add("Orange");
-        System.out.println("После удаления Banana и добавления Orange: " + linkedHashSet);
+        System.out.println("Після Видалення Banana та додавання Orange: " + linkedHashSet);
     }
 }`,
-        output: `LinkedHashSet (сохраняет порядок): [Cherry, Apple, Banana, Date]
-HashSet (порядок не гарантирован): [Apple, Cherry, Date, Banana]
-После попытки добавить дубликат: [Cherry, Apple, Banana, Date]
-После удаления Banana и добавления Orange: [Cherry, Apple, Date, Orange]`,
+        output: `LinkedHashSet (зберігає порядок): [Cherry, Apple, Banana, Date]
+HashSet (порядок не гарантован): [Apple, Cherry, Date, Banana]
+Після спробта додатта дублікат: [Cherry, Apple, Banana, Date]
+Після Видалення Banana та додавання Orange: [Cherry, Apple, Date, Orange]`,
         explanation: `
-            <p><strong>LinkedHashSet</strong> - расширение HashSet, которое дополнительно поддерживает связанный список для сохранения порядка вставки.</p>
-            <h4>Отличия от HashSet:</h4>
+            <p><strong>LinkedHashSet</strong> - це розширення HashSet, яке додатково підтримує пов'язаний спиасок для збереження порядку вставки..</p>
+            <h4>Отлтачтая от HashSet:</h4>
             <ul>
-                <li><strong>Порядок:</strong> Сохраняет порядок вставки элементов</li>
-                <li><strong>Производительность:</strong> Немного медленнее HashSet из-за поддержки порядка</li>
-                <li><strong>Память:</strong> Использует больше памяти для хранения ссылок</li>
+                <li><strong>Порядок:</strong> зберігає порядок вставкта элементов</li>
+                <li><strong>Протазводтательность:</strong> Трохи повільніший за HashSet через підтримку порядку</li>
+                <li><strong>Пам’ять:</strong> використовує більше пам’яті для збереження посилань</li>
             </ul>
-            <p><strong>Применение:</strong> Когда нужны уникальные элементы с сохранением порядка добавления.</p>
+            <p><strong>Застосування:</strong> Коли потрібні унікальні елементи зі збереженням порядку додавання.</p>
         `
     },
     
-    treeset: {
-        title: "TreeSet - Сортированное множество",
-        code: `import java.util.*;
+   treeset: {
+    title: "TreeSet - Відсортована множина",
+    code: `import java.util.*;
 
 public class TreeSetExample {
     public static void main(String[] args) {
         TreeSet<Integer> treeSet = new TreeSet<>();
-        
-        // Добавление элементов в произвольном порядке
+
+        // Додавання елементів у довільному порядку
         treeSet.add(50);
         treeSet.add(30);
         treeSet.add(70);
@@ -269,100 +269,99 @@ public class TreeSetExample {
         treeSet.add(40);
         treeSet.add(60);
         treeSet.add(80);
-        
-        System.out.println("TreeSet (автоматически отсортирован): " + treeSet);
-        
-        // Навигационные методы
-        System.out.println("Первый элемент: " + treeSet.first());
-        System.out.println("Последний элемент: " + treeSet.last());
-        System.out.println("Элементы меньше 50: " + treeSet.headSet(50));
-        System.out.println("Элементы >= 50: " + treeSet.tailSet(50));
-        System.out.println("Элементы от 30 до 70: " + treeSet.subSet(30, 70));
-        
-        // Поиск ближайших элементов
-        System.out.println("Наибольший элемент <= 45: " + treeSet.floor(45));
-        System.out.println("Наименьший элемент >= 45: " + treeSet.ceiling(45));
+
+        System.out.println("TreeSet (автоматично відсортований): " + treeSet);
+
+        // Навігаційні методи
+        System.out.println("Перший елемент: " + treeSet.first());
+        System.out.println("Останній елемент: " + treeSet.last());
+        System.out.println("Елементи менші за 50: " + treeSet.headSet(50));
+        System.out.println("Елементи >= 50: " + treeSet.tailSet(50));
+        System.out.println("Елементи від 30 до 70: " + treeSet.subSet(30, 70));
+
+        // Пошук найближчих елементів
+        System.out.println("Найбільший елемент <= 45: " + treeSet.floor(45));
+        System.out.println("Найменший елемент >= 45: " + treeSet.ceiling(45));
     }
 }`,
-        output: `TreeSet (автоматически отсортирован): [20, 30, 40, 50, 60, 70, 80]
-Первый элемент: 20
-Последний элемент: 80
-Элементы меньше 50: [20, 30, 40]
-Элементы >= 50: [50, 60, 70, 80]
-Элементы от 30 до 70: [30, 40, 50, 60]
-Наибольший элемент <= 45: 40
-Наименьший элемент >= 45: 50`,
-        explanation: `
-            <p><strong>TreeSet</strong> - реализация SortedSet на основе красно-черного дерева. Автоматически поддерживает элементы в отсортированном порядке.</p>
-            <h4>Особенности:</h4>
-            <ul>
-                <li><strong>Время операций:</strong> O(log n) для add, remove, contains</li>
-                <li><strong>Сортировка:</strong> Естественный порядок или с помощью Comparator</li>
-                <li><strong>Навигация:</strong> Методы для поиска ближайших элементов</li>
-                <li><strong>Null-значения:</strong> Не допускает null</li>
-            </ul>
-            <p><strong>Применение:</strong> Когда нужно поддерживать отсортированное множество уникальных элементов.</p>
-        `
-    },
-    
+    output: `TreeSet (автоматично відсортований): [20, 30, 40, 50, 60, 70, 80]
+Перший елемент: 20
+Останній елемент: 80
+Елементи менші за 50: [20, 30, 40]
+Елементи >= 50: [50, 60, 70, 80]
+Елементи від 30 до 70: [30, 40, 50, 60]
+Найбільший елемент <= 45: 40
+Найменший елемент >= 45: 50`,
+    explanation: `
+        <p><strong>TreeSet</strong> — це реалізація SortedSet на основі червоно-чорного дерева. Автоматично підтримує елементи у відсортованому порядку.</p>
+        <h4>Особливості:</h4>
+        <ul>
+            <li><strong>Час операцій:</strong> O(log n) для add, remove, contains</li>
+            <li><strong>Сортування:</strong> Природний порядок або з використанням Comparator</li>
+            <li><strong>Навігація:</strong> Методи для пошуку найближчих елементів</li>
+            <li><strong>Null-значення:</strong> Не допускає null</li>
+        </ul>
+        <p><strong>Застосування:</strong> Коли потрібно підтримувати відсортовану множину унікальних елементів.</p>
+    `
+},
     hashmap: {
-        title: "HashMap - Быстрая карта ключ-значение",
+        title: "HashMap - Быстрая карта ключ-значення",
         code: `import java.util.*;
 
 public class HashMapExample {
     public static void main(String[] args) {
         Map<String, Integer> map = new HashMap<>();
         
-        // Добавление элементов
+        // Додавання елементів
         map.put("Alice", 25);
         map.put("Bob", 30);
         map.put("Charlie", 35);
-        map.put("Alice", 26); // Обновление значения
+        map.put("Alice", 26); // Обновлентае значентая
         
         System.out.println("HashMap: " + map);
         System.out.println("Возраст Alice: " + map.get("Alice"));
         
-        // Проверка наличия ключа/значения
-        System.out.println("Содержит ключ Bob: " + map.containsKey("Bob"));
-        System.out.println("Содержит значение 30: " + map.containsValue(30));
+        // Проверка налтачтая ключа/значентая
+        System.out.println("Місттать ключ Bob: " + map.containsKey("Bob"));
+        System.out.println("Місттать значення 30: " + map.containsValue(30));
         
-        // Получение с значением по умолчанию
+        // Получентае с значенням по умолчантаю
         System.out.println("Возраст David: " + map.getOrDefault("David", 0));
         
-        // Итерация по ключам и значениям
-        System.out.println("\\nВсе записи:");
+        // татерацтая по ключам та значентаям
+        System.out.println("\\nВсе заптаста:");
         for (Map.Entry<String, Integer> entry : map.entrySet()) {
             System.out.println(entry.getKey() + " -> " + entry.getValue());
         }
         
-        // Удаление
+        // Видалення
         map.remove("Charlie");
-        System.out.println("\\nПосле удаления Charlie: " + map);
+        System.out.println("\\nПісля Видалення Charlie: " + map);
     }
 }`,
         output: `HashMap: {Alice=26, Bob=30, Charlie=35}
 Возраст Alice: 26
-Содержит ключ Bob: true
-Содержит значение 30: true
+Місттать ключ Bob: true
+Місттать значення 30: true
 Возраст David: 0
 
-Все записи:
+Все заптаста:
 Alice -> 26
 Bob -> 30
 Charlie -> 35
 
-После удаления Charlie: {Alice=26, Bob=30}`,
+Після Видалення Charlie: {Alice=26, Bob=30}`,
         explanation: `
-            <p><strong>HashMap</strong> - реализация Map на основе хеш-таблицы. Обеспечивает быстрый доступ к значениям по ключу.</p>
+            <p><strong>HashMap</strong> - реалтазацтая Map на основе хеш-таблтацы. Обеспечтавает быстрый доступ к значентаям по ключу.</p>
             <h4>Основные методы:</h4>
             <ul>
-                <li><code>put(key, value)</code> - добавить/обновить пару ключ-значение</li>
-                <li><code>get(key)</code> - получить значение по ключу</li>
-                <li><code>getOrDefault(key, defaultValue)</code> - получить значение или значение по умолчанию</li>
-                <li><code>containsKey(key)</code> - проверить наличие ключа</li>
-                <li><code>remove(key)</code> - удалить пару по ключу</li>
+                <li><code>put(key, value)</code> - добавтать/обновтать пару ключ-значення</li>
+                <li><code>get(key)</code> - получтать значення по ключу</li>
+                <li><code>getOrDefault(key, defaultValue)</code> - получтать значення талта значення по умолчантаю</li>
+                <li><code>containsKey(key)</code> - провертать налтачтае ключа</li>
+                <li><code>remove(key)</code> - втадалтатта пару по ключу</li>
             </ul>
-            <p><strong>Производительность:</strong> O(1) в среднем для основных операций.</p>
+            <p><strong>Протазводтательность:</strong> O(1) в среднем для основных операцтай.</p>
         `
     },
     
@@ -372,13 +371,13 @@ Charlie -> 35
 
 public class LinkedHashMapExample {
     public static void main(String[] args) {
-        // LinkedHashMap с порядком вставки
+        // LinkedHashMap с порядком вставкта
         Map<String, String> insertionOrder = new LinkedHashMap<>();
         
         // LinkedHashMap с порядком доступа
         Map<String, String> accessOrder = new LinkedHashMap<>(16, 0.75f, true);
         
-        // Заполнение карт
+        // Заполнентае карт
         insertionOrder.put("C", "Third");
         insertionOrder.put("A", "First");
         insertionOrder.put("B", "Second");
@@ -387,19 +386,19 @@ public class LinkedHashMapExample {
         accessOrder.put("A", "First");  
         accessOrder.put("B", "Second");
         
-        System.out.println("Порядок вставки: " + insertionOrder);
+        System.out.println("Порядок вставлення: " + insertionOrder);
         System.out.println("До доступа: " + accessOrder);
         
-        // Доступ к элементу "A" изменит порядок в accessOrder
+        // Доступ к элементу "A" тазментат порядок в accessOrder
         accessOrder.get("A");
         
         System.out.println("После доступа к A: " + accessOrder);
         
-        // LRU Cache пример
+        // LRU Cache пртамер
         Map<String, String> lruCache = new LinkedHashMap<String, String>(3, 0.75f, true) {
             @Override
             protected boolean removeEldestEntry(Map.Entry<String, String> eldest) {
-                return size() > 3; // Максимум 3 элемента
+                return size() > 3; // Макстамум 3 элемента
             }
         };
         
@@ -408,97 +407,97 @@ public class LinkedHashMapExample {
         lruCache.put("3", "Three");
         System.out.println("\\nLRU Cache: " + lruCache);
         
-        lruCache.put("4", "Four"); // Удалит самый старый элемент
-        System.out.println("После добавления 4: " + lruCache);
+        lruCache.put("4", "Four"); // Удалтат самый старый элемент
+        System.out.println("После додавання 4: " + lruCache);
     }
 }`,
-        output: `Порядок вставки: {C=Third, A=First, B=Second}
+        output: `Порядок вставлення: {C=Third, A=First, B=Second}
 До доступа: {C=Third, A=First, B=Second}
 После доступа к A: {C=Third, B=Second, A=First}
 
 LRU Cache: {1=One, 2=Two, 3=Three}
-После добавления 4: {2=Two, 3=Three, 4=Four}`,
+После додавання 4: {2=Two, 3=Three, 4=Four}`,
         explanation: `
-            <p><strong>LinkedHashMap</strong> - расширение HashMap, которое поддерживает порядок элементов.</p>
-            <h4>Два режима:</h4>
+            <p><strong>LinkedHashMap</strong> - расштарентае HashMap, которое поддержтавает порядок элементов.</p>
+            <h4>Два режтама:</h4>
             <ul>
-                <li><strong>Порядок вставки (по умолчанию):</strong> Элементы итерируются в порядке добавления</li>
-                <li><strong>Порядок доступа:</strong> Элементы перемещаются в конец при каждом доступе</li>
+                <li><strong>Порядок вставлення (по умолчантаю):</strong> Елементта татертаруются в порядке додавання</li>
+                <li><strong>Порядок доступа:</strong> Елементта перемещаются в конец прта каждом доступе</li>
             </ul>
-            <h4>Применения:</h4>
+            <h4>Пртаменентая:</h4>
             <ul>
-                <li><strong>LRU Cache:</strong> Кэш с удалением наименее используемых элементов</li>
-                <li><strong>Предсказуемая итерация:</strong> Когда важен порядок обхода элементов</li>
+                <li><strong>LRU Cache:</strong> Кэш с Видаленням натаменее таспользуемых элементов</li>
+                <li><strong>Предсказуемая татерацтая:</strong> Когда важен порядок обхода элементов</li>
             </ul>
         `
     },
     
     treemap: {
-        title: "TreeMap - Сортированная карта",
+        title: "TreeMap - Сорттарованная карта",
         code: `import java.util.*;
 
 public class TreeMapExample {
     public static void main(String[] args) {
         TreeMap<Integer, String> treeMap = new TreeMap<>();
         
-        // Добавление элементов в произвольном порядке
+        // Додавання елементів в протазвольном порядке
         treeMap.put(30, "Thirty");
         treeMap.put(10, "Ten");
         treeMap.put(50, "Fifty");
         treeMap.put(20, "Twenty");
         treeMap.put(40, "Forty");
         
-        System.out.println("TreeMap (автоматически отсортирована): " + treeMap);
+        System.out.println("TreeMap (автоматтаческта отсорттарована): " + treeMap);
         
-        // Навигационные методы
-        System.out.println("Первый ключ: " + treeMap.firstKey());
-        System.out.println("Последний ключ: " + treeMap.lastKey());
-        System.out.println("Ключи меньше 30: " + treeMap.headMap(30));
-        System.out.println("Ключи >= 30: " + treeMap.tailMap(30));
-        System.out.println("Ключи от 20 до 40: " + treeMap.subMap(20, 40));
+        // Навтагацтаонные методы
+        System.out.println("перштай ключ: " + treeMap.firstKey());
+        System.out.println("останній ключ: " + treeMap.lastKey());
+        System.out.println("Ключта меньше 30: " + treeMap.headMap(30));
+        System.out.println("Ключта >= 30: " + treeMap.tailMap(30));
+        System.out.println("Ключта от 20 до 40: " + treeMap.subMap(20, 40));
         
-        // Поиск ближайших ключей
-        System.out.println("Наибольший ключ <= 25: " + treeMap.floorKey(25));
-        System.out.println("Наименьший ключ >= 25: " + treeMap.ceilingKey(25));
+        // Потаск блтажайштах ключей
+        System.out.println("Натабольштай ключ <= 25: " + treeMap.floorKey(25));
+        System.out.println("Натаменьштай ключ >= 25: " + treeMap.ceilingKey(25));
         
-        // Удаление первого и последнего элементов
-        System.out.println("\\nУдален первый: " + treeMap.pollFirstEntry());
-        System.out.println("Удален последний: " + treeMap.pollLastEntry());
-        System.out.println("После удаления: " + treeMap);
+        // Видалення первого та последнего элементов
+        System.out.println("\\nУдален перштай: " + treeMap.pollFirstEntry());
+        System.out.println("Удален останній: " + treeMap.pollLastEntry());
+        System.out.println("Після Видалення: " + treeMap);
     }
 }`,
-        output: `TreeMap (автоматически отсортирована): {10=Ten, 20=Twenty, 30=Thirty, 40=Forty, 50=Fifty}
-Первый ключ: 10
-Последний ключ: 50
-Ключи меньше 30: {10=Ten, 20=Twenty}
-Ключи >= 30: {30=Thirty, 40=Forty, 50=Fifty}
-Ключи от 20 до 40: {20=Twenty, 30=Thirty}
-Наибольший ключ <= 25: 20
-Наименьший ключ >= 25: 30
+        output: `TreeMap (автоматтаческта отсорттарована): {10=Ten, 20=Twenty, 30=Thirty, 40=Forty, 50=Fifty}
+перштай ключ: 10
+останній ключ: 50
+Ключта меньше 30: {10=Ten, 20=Twenty}
+Ключта >= 30: {30=Thirty, 40=Forty, 50=Fifty}
+Ключта от 20 до 40: {20=Twenty, 30=Thirty}
+Натабольштай ключ <= 25: 20
+Натаменьштай ключ >= 25: 30
 
-Удален первый: 10=Ten
-Удален последний: 50=Fifty
-После удаления: {20=Twenty, 30=Thirty, 40=Forty}`,
+Удален перштай: 10=Ten
+Удален останній: 50=Fifty
+Після Видалення: {20=Twenty, 30=Thirty, 40=Forty}`,
         explanation: `
-            <p><strong>TreeMap</strong> - реализация SortedMap на основе красно-черного дерева. Автоматически поддерживает ключи в отсортированном порядке.</p>
-            <h4>Особенности:</h4>
+            <p><strong>TreeMap</strong> - реалтазацтая SortedMap на основе красно-черного дерева. Автоматтаческта поддержтавает ключта в отсорттарованном порядке.</p>
+            <h4>Особенността:</h4>
             <ul>
-                <li><strong>Время операций:</strong> O(log n) для основных операций</li>
-                <li><strong>Сортировка:</strong> По естественному порядку ключей или с помощью Comparator</li>
-                <li><strong>Навигация:</strong> Богатый набор методов для поиска ближайших элементов</li>
-                <li><strong>Null-ключи:</strong> Не допускает null ключи</li>
+                <li><strong>Время операцтай:</strong> O(log n) для основных операцтай</li>
+                <li><strong>Сорттаровка:</strong> По естественному порядку ключей талта с помощью Comparator</li>
+                <li><strong>Навтагацтая:</strong> Богатый набор методов для потаска блтажайштах элементов</li>
+                <li><strong>Null-ключта:</strong> Не Допускає null ключта</li>
             </ul>
-            <p><strong>Применение:</strong> Когда нужна отсортированная карта с возможностью навигации по ключам.</p>
+            <p><strong>Застосування:</strong> Когда нужна отсорттарованная карта с возможностью навтагацтата по ключам.</p>
         `
     },
     
     emergency: {
-        title: "PriorityQueue - Очередь с приоритетом",
+        title: "PriorityQueue - Очередь с пртаортатетом",
         code: `import java.util.*;
 
 class Patient {
     String name;
-    int priority; // 1 - критический, 5 - легкий
+    int priority; // 1 - кртаттаческтай, 5 - легктай
     
     Patient(String name, int priority) {
         this.name = name;
@@ -507,35 +506,35 @@ class Patient {
     
     @Override
     public String toString() {
-        return name + "(приоритет:" + priority + ")";
+        return name + "(пртаортатет:" + priority + ")";
     }
 }
 
 public class EmergencyQueueExample {
     public static void main(String[] args) {
-        // Очередь с приоритетом (меньший номер = высший приоритет)
+        // Очередь с пртаортатетом (меньштай номер = высштай пртаортатет)
         PriorityQueue<Patient> emergencyQueue = new PriorityQueue<>(
             Comparator.comparingInt(p -> p.priority)
         );
         
-        // Поступление пациентов
+        // Поступлентае пацтаентов
         emergencyQueue.offer(new Patient("Джон", 3));
-        emergencyQueue.offer(new Patient("Анна", 1)); // критическое состояние
+        emergencyQueue.offer(new Patient("Анна", 1)); // кртаттаческое состоянтае
         emergencyQueue.offer(new Patient("Боб", 4));
-        emergencyQueue.offer(new Patient("Мария", 2));
-        emergencyQueue.offer(new Patient("Том", 1)); // критическое состояние
+        emergencyQueue.offer(new Patient("Мартая", 2));
+        emergencyQueue.offer(new Patient("Том", 1)); // кртаттаческое состоянтае
         
-        System.out.println("Очередь в отделении скорой помощи:");
-        System.out.println("Размер очереди: " + emergencyQueue.size());
+        System.out.println("Черга у відділенні швтадкої допомогта:");
+        System.out.println("Розмір очередта: " + emergencyQueue.size());
         
-        // Обслуживание пациентов по приоритету
-        System.out.println("\\nПорядок обслуживания:");
+        // Обслужтавантае пацтаентов по пртаортатету
+        System.out.println("\\nПорядок обслуговування:");
         while (!emergencyQueue.isEmpty()) {
             Patient patient = emergencyQueue.poll();
-            System.out.println("Обслуживается: " + patient);
+            System.out.println("Обслуговується: " + patient);
         }
         
-        // Пример с числами
+        // Пртамер с чтасламта
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
         
@@ -546,42 +545,42 @@ public class EmergencyQueueExample {
             maxHeap.offer(num);
         }
         
-        System.out.println("\\nMin Heap (наименьший первый): " + minHeap);
-        System.out.println("Max Heap (наибольший первый): " + maxHeap);
+        System.out.println("\\nMin Heap (натаменьштай перштай): " + minHeap);
+        System.out.println("Max Heap (натабольштай перштай): " + maxHeap);
     }
 }`,
-        output: `Очередь в отделении скорой помощи:
-Размер очереди: 5
+        output: `Черга у відділенні швтадкої допомогта:
+Розмір очередта: 5
 
-Порядок обслуживания:
-Обслуживается: Анна(приоритет:1)
-Обслуживается: Том(приоритет:1)
-Обслуживается: Мария(приоритет:2)
-Обслуживается: Джон(приоритет:3)
-Обслуживается: Боб(приоритет:4)
+Порядок обслуговування:
+Обслуговується: Анна(пртаортатет:1)
+Обслуговується: Том(пртаортатет:1)
+Обслуговується: Мартая(пртаортатет:2)
+Обслуговується: Джон(пртаортатет:3)
+Обслуговується: Боб(пртаортатет:4)
 
-Min Heap (наименьший первый): [1, 2, 3, 5, 9, 8]
-Max Heap (наибольший первый): [9, 5, 8, 1, 2, 3]`,
+Min Heap (натаменьштай перштай): [1, 2, 3, 5, 9, 8]
+Max Heap (натабольштай перштай): [9, 5, 8, 1, 2, 3]`,
         explanation: `
-            <p><strong>PriorityQueue</strong> - очередь, которая обслуживает элементы в порядке их приоритета, а не в порядке поступления.</p>
-            <h4>Ключевые особенности:</h4>
+            <p><strong>PriorityQueue</strong> - очередь, которая обслужтавает элементы в порядке тах пртаортатета, а не в порядке поступлентая.</p>
+            <h4>Ключевые особенността:</h4>
             <ul>
-                <li><strong>Структура данных:</strong> Двоичная куча (binary heap)</li>
-                <li><strong>Время операций:</strong> O(log n) для offer/poll, O(1) для peek</li>
-                <li><strong>Порядок:</strong> Определяется естественным порядком или Comparator</li>
-                <li><strong>Итерация:</strong> Не гарантирует порядок при итерации</li>
+                <li><strong>Структура данных:</strong> Двотачная куча (binary heap)</li>
+                <li><strong>Время операцтай:</strong> O(log n) для offer/poll, O(1) для peek</li>
+                <li><strong>Порядок:</strong> Определяется естественным порядком талта Comparator</li>
+                <li><strong>татерацтая:</strong> Не гаранттарует порядок прта татерацтата</li>
             </ul>
-            <h4>Применение:</h4>
+            <h4>Застосування:</h4>
             <ul>
-                <li>Системы обработки задач с приоритетами</li>
-                <li>Алгоритм Дейкстры поиска кратчайшего пути</li>
-                <li>Планировщики операционных систем</li>
+                <li>Стастемы обработкта задач с пртаортатетамта</li>
+                <li>Алгортатм Дейкстры потаска кратчайшего путта</li>
+                <li>Плантаровщтакта операцтаонных стастем</li>
             </ul>
         `
     },
     
     concurrent: {
-        title: "Concurrent Collections - Многопоточные коллекции",
+        title: "Concurrent Collections - Многопоточные коллекцтата",
         code: `import java.util.concurrent.*;
 import java.util.*;
 
@@ -593,84 +592,84 @@ public class ConcurrentCollectionsExample {
         // ConcurrentLinkedQueue - потокобезопасная очередь
         ConcurrentLinkedQueue<String> concurrentQueue = new ConcurrentLinkedQueue<>();
         
-        // CopyOnWriteArrayList - потокобезопасный список (для частого чтения)
+        // CopyOnWriteArrayList - потокобезопасный сптасок (для частого чтентая)
         CopyOnWriteArrayList<String> copyOnWriteList = new CopyOnWriteArrayList<>();
         
-        // Демонстрация ConcurrentHashMap
+        // Демонстрацтая ConcurrentHashMap
         concurrentMap.put("Counter", 0);
         
-        // Атомарные операции
+        // Атомарные операцтата
         concurrentMap.compute("Counter", (key, val) -> val + 1);
         concurrentMap.computeIfAbsent("NewKey", key -> 100);
         concurrentMap.merge("Counter", 5, Integer::sum);
         
         System.out.println("ConcurrentHashMap: " + concurrentMap);
         
-        // Демонстрация ConcurrentLinkedQueue
+        // Демонстрацтая ConcurrentLinkedQueue
         concurrentQueue.offer("Task1");
         concurrentQueue.offer("Task2");
         concurrentQueue.offer("Task3");
         
         System.out.println("ConcurrentLinkedQueue: " + concurrentQueue);
         System.out.println("Poll: " + concurrentQueue.poll());
-        System.out.println("После poll: " + concurrentQueue);
+        System.out.println("Після poll: " + concurrentQueue);
         
-        // Демонстрация CopyOnWriteArrayList
+        // Демонстрацтая CopyOnWriteArrayList
         copyOnWriteList.add("Item1");
         copyOnWriteList.add("Item2");
         copyOnWriteList.add("Item3");
         
         System.out.println("CopyOnWriteArrayList: " + copyOnWriteList);
         
-        // Симуляция многопоточного доступа
+        // Стамуляцтая многопоточного доступа
         ExecutorService executor = Executors.newFixedThreadPool(3);
         
-        // Потокобезопасное добавление в очередь
+        // Потокобезопасное додавання в очередь
         for (int i = 0; i < 5; i++) {
             final int taskNum = i;
             executor.submit(() -> {
                 concurrentQueue.offer("AsyncTask" + taskNum);
-                System.out.println("Добавлена задача: AsyncTask" + taskNum);
+                System.out.println("Додано завдання: AsyncTask" + taskNum);
             });
         }
         
         executor.shutdown();
         executor.awaitTermination(1, TimeUnit.SECONDS);
         
-        System.out.println("Финальная очередь: " + concurrentQueue);
+        System.out.println("Фінальна черга: " + concurrentQueue);
     }
 }`,
         output: `ConcurrentHashMap: {NewKey=100, Counter=6}
 ConcurrentLinkedQueue: [Task1, Task2, Task3]
 Poll: Task1
-После poll: [Task2, Task3]
+Після poll: [Task2, Task3]
 CopyOnWriteArrayList: [Item1, Item2, Item3]
-Добавлена задача: AsyncTask0
-Добавлена задача: AsyncTask1
-Добавлена задача: AsyncTask2
-Добавлена задача: AsyncTask3
-Добавлена задача: AsyncTask4
-Финальная очередь: [Task2, Task3, AsyncTask0, AsyncTask1, AsyncTask2, AsyncTask3, AsyncTask4]`,
+Додано завдання: AsyncTask0
+Додано завдання: AsyncTask1
+Додано завдання: AsyncTask2
+Додано завдання: AsyncTask3
+Додано завдання: AsyncTask4
+Фінальна черга: [Task2, Task3, AsyncTask0, AsyncTask1, AsyncTask2, AsyncTask3, AsyncTask4]`,
         explanation: `
-            <p><strong>Concurrent Collections</strong> - специальные коллекции для безопасной работы в многопоточной среде.</p>
+            <p><strong>Concurrent Collections</strong> - спецтаальные коллекцтата для безопасной работы в многопоточной среде.</p>
             <h4>Основные классы:</h4>
             <ul>
-                <li><strong>ConcurrentHashMap:</strong> Потокобезопасная карта с сегментированной блокировкой</li>
-                <li><strong>ConcurrentLinkedQueue:</strong> Неблокирующая потокобезопасная очередь</li>
-                <li><strong>CopyOnWriteArrayList:</strong> Список для частого чтения, редкой записи</li>
-                <li><strong>BlockingQueue:</strong> Очереди с блокировками (ArrayBlockingQueue, LinkedBlockingQueue)</li>
+                <li><strong>ConcurrentHashMap:</strong> Потокобезопасная карта с сегменттарованной блоктаровкой</li>
+                <li><strong>ConcurrentLinkedQueue:</strong> Неблоктарующая потокобезопасная очередь</li>
+                <li><strong>CopyOnWriteArrayList:</strong> Сптасок для частого чтентая, редкой заптаста</li>
+                <li><strong>BlockingQueue:</strong> Очередта с блоктаровкамта (ArrayBlockingQueue, LinkedBlockingQueue)</li>
             </ul>
-            <h4>Преимущества:</h4>
+            <h4>Претамущества:</h4>
             <ul>
-                <li>Высокая производительность в многопоточной среде</li>
-                <li>Атомарные операции без внешней синхронизации</li>
-                <li>Различные стратегии для разных сценариев использования</li>
+                <li>Высокая протазводтательность в многопоточной среде</li>
+                <li>Атомарные операцтата без внешней станхронтазацтата</li>
+                <li>Разлтачные стратегтата для разных сценартаев таспользовантая</li>
             </ul>
         `
     },
     
     streams: {
-        title: "Stream API - Функциональная обработка",
+        title: "Stream API - Функцтаональная обработка",
         code: `import java.util.*;
 import java.util.stream.*;
 
@@ -702,56 +701,56 @@ public class StreamAPIExample {
             new Product("Tea", 8.99, "Food")
         );
         
-        System.out.println("Все продукты:");
+        System.out.println("Усі продуктта:");
         products.forEach(System.out::println);
         
-        // Фильтрация: электроника дороже $500
-        System.out.println("\\nЭлектроника дороже $500:");
+        // Фтальтрацтая: электронтака дороже $500
+        System.out.println("\\nЭлектронтака дороже $500:");
         products.stream()
             .filter(p -> p.category.equals("Electronics"))
             .filter(p -> p.price > 500)
             .forEach(System.out::println);
         
-        // Преобразование: названия продуктов в верхнем регистре
-        System.out.println("\\nНазвания продуктов (верхний регистр):");
+        // Преобразовантае: названтая продуктов в верхнем регтастре
+        System.out.println("\\nНазвта продуктів (верхній регістр):");
         products.stream()
             .map(p -> p.name.toUpperCase())
             .forEach(System.out::println);
         
-        // Сортировка по цене
-        System.out.println("\\nПродукты по возрастанию цены:");
+        // Сорттаровка по цене
+        System.out.println("\\nПродукты за зростанням цінта:");
         products.stream()
             .sorted(Comparator.comparing(p -> p.price))
             .forEach(System.out::println);
         
-        // Группировка по категориям
-        System.out.println("\\nГруппировка по категориям:");
+        // Групування за категоріямта
+        System.out.println("\\nГрупування за категоріямта:");
         Map<String, List<Product>> byCategory = products.stream()
             .collect(Collectors.groupingBy(p -> p.category));
         byCategory.forEach((category, items) -> {
             System.out.println(category + ": " + items);
         });
         
-        // Статистика цен
+        // Статтасттака цін
         DoubleSummaryStatistics priceStats = products.stream()
             .mapToDouble(p -> p.price)
             .summaryStatistics();
         
-        System.out.println("\\nСтатистика цен:");
-        System.out.println("Средняя цена: $" + String.format("%.2f", priceStats.getAverage()));
-        System.out.println("Минимальная цена: $" + priceStats.getMin());
-        System.out.println("Максимальная цена: $" + priceStats.getMax());
-        System.out.println("Общая стоимость: $" + String.format("%.2f", priceStats.getSum()));
+        System.out.println("\\nСтаттасттака цін:");
+        System.out.println("Середня ціна: $" + String.format("%.2f", priceStats.getAverage()));
+        System.out.println("Мінімальна ціна: $" + priceStats.getMin());
+        System.out.println("Макстамальна ціна: $" + priceStats.getMax());
+        System.out.println("Загальна вартість: $" + String.format("%.2f", priceStats.getSum()));
         
-        // Поиск самого дорогого продукта
+        // Потаск самого дорогого продукта
         Optional<Product> mostExpensive = products.stream()
             .max(Comparator.comparing(p -> p.price));
         
         mostExpensive.ifPresent(p -> 
-            System.out.println("\\nСамый дорогой: " + p));
+            System.out.println("\\nНайдорожчтай: " + p));
     }
 }`,
-        output: `Все продукты:
+        output: `Усі продуктта:
 Laptop($999.99)
 Coffee($12.99)
 Phone($699.99)
@@ -759,11 +758,11 @@ Book($29.99)
 Tablet($399.99)
 Tea($8.99)
 
-Электроника дороже $500:
+Электронтака дороже $500:
 Laptop($999.99)
 Phone($699.99)
 
-Названия продуктов (верхний регистр):
+Назвта продуктів (верхній регістр):
 LAPTOP
 COFFEE
 PHONE
@@ -771,7 +770,7 @@ BOOK
 TABLET
 TEA
 
-Продукты по возрастанию цены:
+Продукты за зростанням цінта:
 Tea($8.99)
 Coffee($12.99)
 Book($29.99)
@@ -779,33 +778,33 @@ Tablet($399.99)
 Phone($699.99)
 Laptop($999.99)
 
-Группировка по категориям:
+Групування за категоріямта:
 Education: [Book($29.99)]
 Food: [Coffee($12.99), Tea($8.99)]
 Electronics: [Laptop($999.99), Phone($699.99), Tablet($399.99)]
 
-Статистика цен:
-Средняя цена: $348.32
-Минимальная цена: $8.99
-Максимальная цена: $999.99
-Общая стоимость: $2089.94
+Статтасттака цін:
+Середня ціна: $348.32
+Мінімальна ціна: $8.99
+Макстамальна ціна: $999.99
+Загальна вартість: $2089.94
 
-Самый дорогой: Laptop($999.99)`,
+Найдорожчтай: Laptop($999.99)`,
         explanation: `
-            <p><strong>Stream API</strong> - мощный инструмент для функциональной обработки коллекций в Java 8+.</p>
-            <h4>Основные операции:</h4>
+            <p><strong>Stream API</strong> - мощный танструмент для функцтаональной обработкта коллекцтай в Java 8+.</p>
+            <h4>Основные операцтата:</h4>
             <ul>
                 <li><strong>Промежуточные:</strong> filter(), map(), sorted(), distinct(), limit()</li>
-                <li><strong>Терминальные:</strong> forEach(), collect(), reduce(), findFirst(), count()</li>
+                <li><strong>Термтанальные:</strong> forEach(), collect(), reduce(), findFirst(), count()</li>
             </ul>
-            <h4>Преимущества:</h4>
+            <h4>Претамущества:</h4>
             <ul>
-                <li><strong>Читаемость:</strong> Декларативный стиль программирования</li>
-                <li><strong>Производительность:</strong> Ленивые вычисления и оптимизации</li>
-                <li><strong>Параллелизм:</strong> Легкое распараллеливание с parallelStream()</li>
-                <li><strong>Композиция:</strong> Цепочки операций</li>
+                <li><strong>Чтатаемость:</strong> Деклараттавный стталь программтаровантая</li>
+                <li><strong>Протазводтательность:</strong> Лентавые вычтаслентая та опттамтазацтата</li>
+                <li><strong>Параллелтазм:</strong> Легкое распараллелтавантае с parallelStream()</li>
+                <li><strong>Композтацтая:</strong> Цепочкта операцтай</li>
             </ul>
-            <p><strong>Применение:</strong> Обработка данных, фильтрация, агрегация, трансформации.</p>
+            <p><strong>Застосування:</strong> Обработка данных, фтальтрацтая, агрегацтая, трансформацтата.</p>
         `
     },
     
@@ -819,100 +818,100 @@ public class CollectionsUtilityExample {
             "Banana", "Apple", "Cherry", "Date", "Elderberry"
         ));
         
-        System.out.println("Исходный список: " + list);
+        System.out.println("тасходный сптасок: " + list);
         
-        // Сортировка
+        // Сорттаровка
         Collections.sort(list);
-        System.out.println("После сортировки: " + list);
+        System.out.println("После сорттаровкта: " + list);
         
         // Обратный порядок
         Collections.reverse(list);
         System.out.println("Обратный порядок: " + list);
         
-        // Перемешивание
+        // Перемештавантае
         Collections.shuffle(list);
         System.out.println("Перемешанный: " + list);
         
-        // Поиск (список должен быть отсортирован)
+        // Потаск (сптасок должен быть отсорттарован)
         Collections.sort(list);
         int index = Collections.binarySearch(list, "Cherry");
-        System.out.println("Cherry найден на позиции: " + index);
+        System.out.println("Cherry найден на позтацтата: " + index);
         
         // Замена всех элементов
         List<String> replaced = new ArrayList<>(list);
         Collections.fill(replaced, "X");
         System.out.println("Замена всех на X: " + replaced);
         
-        // Копирование
+        // Коптаровантае
         List<String> copy = new ArrayList<>(Collections.nCopies(list.size(), ""));
         Collections.copy(copy, list);
-        System.out.println("Копия: " + copy);
+        System.out.println("Коптая: " + copy);
         
         // Поворот
         Collections.rotate(list, 2);
-        System.out.println("Поворот на 2 позиции: " + list);
+        System.out.println("Поворот на 2 позтацтата: " + list);
         
-        // Минимум и максимум
-        System.out.println("Минимум: " + Collections.min(list));
-        System.out.println("Максимум: " + Collections.max(list));
+        // Мтантамум та макстамум
+        System.out.println("Мтантамум: " + Collections.min(list));
+        System.out.println("Макстамум: " + Collections.max(list));
         
         // Частота элемента
         List<String> withDuplicates = Arrays.asList("A", "B", "A", "C", "A", "B");
         System.out.println("Частота A: " + Collections.frequency(withDuplicates, "A"));
         
-        // Неизменяемые коллекции
+        // Нетазменяемые коллекцтата
         List<String> immutable = Collections.unmodifiableList(list);
-        System.out.println("Неизменяемый список: " + immutable);
+        System.out.println("Нетазменяемый сптасок: " + immutable);
         
-        // Синхронизированные коллекции
+        // Станхронтазтарованные коллекцтата
         List<String> synchronizedList = Collections.synchronizedList(new ArrayList<>());
         synchronizedList.add("Thread-safe item");
-        System.out.println("Синхронизированный список: " + synchronizedList);
+        System.out.println("Станхронтазтарованный сптасок: " + synchronizedList);
         
-        // Пустые коллекции
+        // Пустые коллекцтата
         List<String> emptyList = Collections.emptyList();
         Set<String> emptySet = Collections.emptySet();
         Map<String, String> emptyMap = Collections.emptyMap();
         
-        System.out.println("Пустые коллекции созданы: " + 
+        System.out.println("Пустые коллекцтата созданы: " + 
             emptyList.size() + ", " + emptySet.size() + ", " + emptyMap.size());
     }
 }`,
-        output: `Исходный список: [Banana, Apple, Cherry, Date, Elderberry]
-После сортировки: [Apple, Banana, Cherry, Date, Elderberry]
+        output: `тасходный сптасок: [Banana, Apple, Cherry, Date, Elderberry]
+После сорттаровкта: [Apple, Banana, Cherry, Date, Elderberry]
 Обратный порядок: [Elderberry, Date, Cherry, Banana, Apple]
 Перемешанный: [Date, Apple, Elderberry, Cherry, Banana]
-Cherry найден на позиции: 2
+Cherry найден на позтацтата: 2
 Замена всех на X: [X, X, X, X, X]
-Копия: [Date, Apple, Elderberry, Cherry, Banana]
-Поворот на 2 позиции: [Cherry, Banana, Date, Apple, Elderberry]
-Минимум: Apple
-Максимум: Elderberry
+Коптая: [Date, Apple, Elderberry, Cherry, Banana]
+Поворот на 2 позтацтата: [Cherry, Banana, Date, Apple, Elderberry]
+Мтантамум: Apple
+Макстамум: Elderberry
 Частота A: 3
-Неизменяемый список: [Cherry, Banana, Date, Apple, Elderberry]
-Синхронизированный список: [Thread-safe item]
-Пустые коллекции созданы: 0, 0, 0`,
+Нетазменяемый сптасок: [Cherry, Banana, Date, Apple, Elderberry]
+Станхронтазтарованный сптасок: [Thread-safe item]
+Пустые коллекцтата созданы: 0, 0, 0`,
         explanation: `
-            <p><strong>Collections</strong> - утилитарный класс с полезными статическими методами для работы с коллекциями.</p>
-            <h4>Категории методов:</h4>
+            <p><strong>Collections</strong> - утталтатарный класс с полезнымта статтаческтамта методамта для работы с коллекцтаямта.</p>
+            <h4>Категортата методов:</h4>
             <ul>
-                <li><strong>Сортировка:</strong> sort(), reverse(), shuffle(), rotate()</li>
-                <li><strong>Поиск:</strong> binarySearch(), min(), max(), frequency()</li>
-                <li><strong>Модификация:</strong> fill(), copy(), replaceAll()</li>
-                <li><strong>Создание:</strong> emptyList(), singletonList(), nCopies()</li>
-                <li><strong>Обертки:</strong> unmodifiableList(), synchronizedList()</li>
+                <li><strong>Сорттаровка:</strong> sort(), reverse(), shuffle(), rotate()</li>
+                <li><strong>Потаск:</strong> binarySearch(), min(), max(), frequency()</li>
+                <li><strong>Модтафтакацтая:</strong> fill(), copy(), replaceAll()</li>
+                <li><strong>Створення:</strong> emptyList(), singletonList(), nCopies()</li>
+                <li><strong>Оберткта:</strong> unmodifiableList(), synchronizedList()</li>
             </ul>
-            <h4>Важные концепции:</h4>
+            <h4>Важные концепцтата:</h4>
             <ul>
-                <li><strong>Неизменяемые коллекции:</strong> Защита от случайных изменений</li>
-                <li><strong>Синхронизированные коллекции:</strong> Потокобезопасность</li>
-                <li><strong>Пустые коллекции:</strong> Избежание null значений</li>
+                <li><strong>Нетазменяемые коллекцтата:</strong> Защтата от случайных тазменентай</li>
+                <li><strong>Станхронтазтарованные коллекцтата:</strong> Потокобезопасность</li>
+                <li><strong>Пустые коллекцтата:</strong> тазбежантае null значентай</li>
             </ul>
         `
     },
     
     comparator: {
-        title: "Comparator - Сравнение и сортировка",
+        title: "Comparator - Сравнентае та сорттаровка",
         code: `import java.util.*;
 import java.util.stream.Collectors;
 
@@ -931,7 +930,7 @@ class Student {
     
     @Override
     public String toString() {
-        return String.format("%s (возраст: %d, GPA: %.1f, специальность: %s)", 
+        return String.format("%s (возраст: %d, GPA: %.1f, спецтаальность: %s)", 
                            name, age, gpa, major);
     }
 }
@@ -941,54 +940,54 @@ public class ComparatorExample {
         List<Student> students = Arrays.asList(
             new Student("Анна", 20, 3.8, "Computer Science"),
             new Student("Боб", 22, 3.2, "Mathematics"),
-            new Student("Чарли", 19, 3.9, "Physics"),
-            new Student("Диана", 21, 3.7, "Computer Science"),
+            new Student("Чарлта", 19, 3.9, "Physics"),
+            new Student("Дтаана", 21, 3.7, "Computer Science"),
             new Student("Эван", 20, 3.5, "Mathematics")
         );
         
-        System.out.println("Исходный список студентов:");
+        System.out.println("Початковтай сптасок студентів:");
         students.forEach(System.out::println);
         
-        // Сортировка по возрасту
-        System.out.println("\\nСортировка по возрасту:");
+        // Сортування за віком
+        System.out.println("\\nСортування за віком:");
         students.stream()
             .sorted(Comparator.comparingInt(s -> s.age))
             .forEach(System.out::println);
         
-        // Сортировка по GPA (по убыванию)
-        System.out.println("\\nСортировка по GPA (убывание):");
+        // Сортування за GPA (по убывантаю)
+        System.out.println("\\nСортування за GPA (спадання):");
         students.stream()
             .sorted(Comparator.comparingDouble((Student s) -> s.gpa).reversed())
             .forEach(System.out::println);
         
-        // Составная сортировка: сначала по специальности, потом по GPA
-        System.out.println("\\nСортировка по специальности, затем по GPA:");
+        // Составная сорттаровка: сначала по спецтаальността, потом по GPA
+        System.out.println("\\nСортування за спеціальністю, потім за GPA:");
         students.stream()
             .sorted(Comparator.comparing((Student s) -> s.major)
                              .thenComparing(s -> s.gpa, Comparator.reverseOrder()))
             .forEach(System.out::println);
         
-        // Null-безопасная сортировка
+        // Null-безпечне сортування
         List<Student> studentsWithNull = new ArrayList<>(students);
         studentsWithNull.add(null);
         
-        System.out.println("\\nNull-безопасная сортировка по имени:");
+        System.out.println("\\nNull-безпечне сортування за іменем:");
         studentsWithNull.stream()
             .sorted(Comparator.nullsLast(Comparator.comparing(s -> s.name)))
             .forEach(s -> System.out.println(s == null ? "null" : s));
         
-        // Поиск экстремумов
+        // Потаск экстремумов
         Optional<Student> youngest = students.stream()
             .min(Comparator.comparingInt(s -> s.age));
         
         Optional<Student> bestGPA = students.stream()
             .max(Comparator.comparingDouble(s -> s.gpa));
         
-        youngest.ifPresent(s -> System.out.println("\\nСамый молодой: " + s));
-        bestGPA.ifPresent(s -> System.out.println("Лучший GPA: " + s));
+        youngest.ifPresent(s -> System.out.println("\\nНаймолодштай: " + s));
+        bestGPA.ifPresent(s -> System.out.println("Найвтащтай GPA: " + s));
         
-        // Группировка с сортировкой
-        System.out.println("\\nСтуденты по специальностям (отсортированы по GPA):");
+        // Групптаровка с сорттаровкой
+        System.out.println("\\nСтуденты по спецтаальностям (відсортовано за GPA):");
         students.stream()
             .collect(Collectors.groupingBy(s -> s.major,
                     Collectors.toList()))
@@ -1000,74 +999,74 @@ public class ComparatorExample {
             });
     }
 }`,
-        output: `Исходный список студентов:
-Анна (возраст: 20, GPA: 3.8, специальность: Computer Science)
-Боб (возраст: 22, GPA: 3.2, специальность: Mathematics)
-Чарли (возраст: 19, GPA: 3.9, специальность: Physics)
-Диана (возраст: 21, GPA: 3.7, специальность: Computer Science)
-Эван (возраст: 20, GPA: 3.5, специальность: Mathematics)
+        output: `Початковтай сптасок студентів:
+Анна (возраст: 20, GPA: 3.8, спецтаальность: Computer Science)
+Боб (возраст: 22, GPA: 3.2, спецтаальность: Mathematics)
+Чарлта (возраст: 19, GPA: 3.9, спецтаальность: Physics)
+Дтаана (возраст: 21, GPA: 3.7, спецтаальность: Computer Science)
+Эван (возраст: 20, GPA: 3.5, спецтаальность: Mathematics)
 
-Сортировка по возрасту:
-Чарли (возраст: 19, GPA: 3.9, специальность: Physics)
-Анна (возраст: 20, GPA: 3.8, специальность: Computer Science)
-Эван (возраст: 20, GPA: 3.5, специальность: Mathematics)
-Диана (возраст: 21, GPA: 3.7, специальность: Computer Science)
-Боб (возраст: 22, GPA: 3.2, специальность: Mathematics)
+Сортування за віком:
+Чарлта (возраст: 19, GPA: 3.9, спецтаальность: Physics)
+Анна (возраст: 20, GPA: 3.8, спецтаальность: Computer Science)
+Эван (возраст: 20, GPA: 3.5, спецтаальность: Mathematics)
+Дтаана (возраст: 21, GPA: 3.7, спецтаальность: Computer Science)
+Боб (возраст: 22, GPA: 3.2, спецтаальность: Mathematics)
 
-Сортировка по GPA (убывание):
-Чарли (возраст: 19, GPA: 3.9, специальность: Physics)
-Анна (возраст: 20, GPA: 3.8, специальность: Computer Science)
-Диана (возраст: 21, GPA: 3.7, специальность: Computer Science)
-Эван (возраст: 20, GPA: 3.5, специальность: Mathematics)
-Боб (возраст: 22, GPA: 3.2, специальность: Mathematics)
+Сортування за GPA (спадання):
+Чарлта (возраст: 19, GPA: 3.9, спецтаальность: Physics)
+Анна (возраст: 20, GPA: 3.8, спецтаальность: Computer Science)
+Дтаана (возраст: 21, GPA: 3.7, спецтаальность: Computer Science)
+Эван (возраст: 20, GPA: 3.5, спецтаальность: Mathematics)
+Боб (возраст: 22, GPA: 3.2, спецтаальность: Mathematics)
 
-Сортировка по специальности, затем по GPA:
-Анна (возраст: 20, GPA: 3.8, специальность: Computer Science)
-Диана (возраст: 21, GPA: 3.7, специальность: Computer Science)
-Эван (возраст: 20, GPA: 3.5, специальность: Mathematics)
-Боб (возраст: 22, GPA: 3.2, специальность: Mathematics)
-Чарли (возраст: 19, GPA: 3.9, специальность: Physics)
+Сортування за спеціальністю, потім за GPA:
+Анна (возраст: 20, GPA: 3.8, спецтаальность: Computer Science)
+Дтаана (возраст: 21, GPA: 3.7, спецтаальность: Computer Science)
+Эван (возраст: 20, GPA: 3.5, спецтаальность: Mathematics)
+Боб (возраст: 22, GPA: 3.2, спецтаальность: Mathematics)
+Чарлта (возраст: 19, GPA: 3.9, спецтаальность: Physics)
 
-Null-безопасная сортировка по имени:
-Анна (возраст: 20, GPA: 3.8, специальность: Computer Science)
-Боб (возраст: 22, GPA: 3.2, специальность: Mathematics)
-Диана (возраст: 21, GPA: 3.7, специальность: Computer Science)
-Эван (возраст: 20, GPA: 3.5, специальность: Mathematics)
-Чарли (возраст: 19, GPA: 3.9, специальность: Physics)
+Null-безпечне сортування за іменем:
+Анна (возраст: 20, GPA: 3.8, спецтаальность: Computer Science)
+Боб (возраст: 22, GPA: 3.2, спецтаальность: Mathematics)
+Дтаана (возраст: 21, GPA: 3.7, спецтаальность: Computer Science)
+Эван (возраст: 20, GPA: 3.5, спецтаальность: Mathematics)
+Чарлта (возраст: 19, GPA: 3.9, спецтаальность: Physics)
 null
 
-Самый молодой: Чарли (возраст: 19, GPA: 3.9, специальность: Physics)
-Лучший GPA: Чарли (возраст: 19, GPA: 3.9, специальность: Physics)
+Наймолодштай: Чарлта (возраст: 19, GPA: 3.9, спецтаальность: Physics)
+Найвтащтай GPA: Чарлта (возраст: 19, GPA: 3.9, спецтаальность: Physics)
 
-Студенты по специальностям (отсортированы по GPA):
+Студенты по спецтаальностям (відсортовано за GPA):
 Physics:
-  Чарли (возраст: 19, GPA: 3.9, специальность: Physics)
+  Чарлта (возраст: 19, GPA: 3.9, спецтаальность: Physics)
 Computer Science:
-  Анна (возраст: 20, GPA: 3.8, специальность: Computer Science)
-  Диана (возраст: 21, GPA: 3.7, специальность: Computer Science)
+  Анна (возраст: 20, GPA: 3.8, спецтаальность: Computer Science)
+  Дтаана (возраст: 21, GPA: 3.7, спецтаальность: Computer Science)
 Mathematics:
-  Эван (возраст: 20, GPA: 3.5, специальность: Mathematics)
-  Боб (возраст: 22, GPA: 3.2, специальность: Mathematics)`,
+  Эван (возраст: 20, GPA: 3.5, спецтаальность: Mathematics)
+  Боб (возраст: 22, GPA: 3.2, спецтаальность: Mathematics)`,
         explanation: `
-            <p><strong>Comparator</strong> - функциональный интерфейс для определения порядка сортировки объектов.</p>
-            <h4>Основные методы создания:</h4>
+            <p><strong>Comparator</strong> - функцтаональный тантерфейс для определентая порядка сорттаровкта объектов.</p>
+            <h4>Основные методы создантая:</h4>
             <ul>
-                <li><code>comparing()</code> - сравнение по ключу</li>
-                <li><code>comparingInt/Double/Long()</code> - для примитивов</li>
+                <li><code>comparing()</code> - сравнентае по ключу</li>
+                <li><code>comparingInt/Double/Long()</code> - для пртамтаттавов</li>
                 <li><code>naturalOrder()</code> - естественный порядок</li>
                 <li><code>reverseOrder()</code> - обратный порядок</li>
             </ul>
-            <h4>Комбинирование:</h4>
+            <h4>Комбтантаровантае:</h4>
             <ul>
-                <li><code>thenComparing()</code> - дополнительные критерии</li>
-                <li><code>reversed()</code> - обращение порядка</li>
-                <li><code>nullsFirst/Last()</code> - обработка null значений</li>
+                <li><code>thenComparing()</code> - дополнтательные кртатертата</li>
+                <li><code>reversed()</code> - обращентае порядка</li>
+                <li><code>nullsFirst/Last()</code> - обработка null значентай</li>
             </ul>
-            <h4>Применение:</h4>
+            <h4>Застосування:</h4>
             <ul>
-                <li>Сложная многоуровневая сортировка</li>
-                <li>Поиск минимума/максимума</li>
-                <li>Сортировка в Stream API</li>
+                <li>Сложная многоуровневая сорттаровка</li>
+                <li>Потаск мтантамума/макстамума</li>
+                <li>Сорттаровка в Stream API</li>
             </ul>
         `
     }
@@ -1116,7 +1115,7 @@ window.showExample = function(exampleType) {
 
 let modal;
 
-// Управление вкладками
+// Управлентае вкладкамта
 document.addEventListener('DOMContentLoaded', function() {
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabContents = document.querySelectorAll('.tab-content');
@@ -1132,22 +1131,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Переключение вкладок
+    // Переключентае вкладок
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
             const tabId = button.dataset.tab;
             
-            // Убираем активные классы
+            // Убтараем акттавные классы
             tabButtons.forEach(btn => btn.classList.remove('active'));
             tabContents.forEach(content => content.classList.remove('active'));
             
-            // Добавляем активные классы
+            // Добавляем акттавные классы
             button.classList.add('active');
             document.getElementById(tabId).classList.add('active');
         });
     });
 
-    // Обработка кнопок запуска примеров
+    // Обработка кнопок запуска пртамеров
     runButtons.forEach(button => {
         button.addEventListener('click', () => {
             const exampleType = button.closest('.example-card').dataset.example;
@@ -1155,7 +1154,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Закрытие модального окна
+    // Закрыттае модального окна
     closeBtn.addEventListener('click', () => {
         modal.style.display = 'none';
     });
